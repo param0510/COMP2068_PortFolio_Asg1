@@ -1,7 +1,8 @@
 {{!-- Code Source: https://colorlib.com/wp/template/contact-form-02/ --}}
 
-{{!-- <h1>{{title}}</h1> --}}
+{{!-- Contacts Page --}}
 
+{{!-- Stylesheet links --}}
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,7 +59,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <input id="sendMsgBtn" type="submit" value="Send Message" class="btn btn-primary">
                                                     <div class="submitting"></div>
                                                 </div>
                                             </div>
@@ -84,7 +85,7 @@
                                             <span class="fa fa-phone"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>Phone:</span> <a href="tel://7058344055">705-(834)-4055</a></p>
+                                            <p><span>Phone:</span> <a target="_blank" href="tel://7058344055">705-(834)-4055</a></p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">
@@ -92,8 +93,7 @@
                                             <span class="fa fa-paper-plane"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>Email:</span> <a
-                                                    href="mailto:paramveer@gmail.com">paramveer0510@gmail.com</a></p>
+                                            <p><span>Email:</span> <a href="mailto:paramveer@gmail.com">paramveer0510@gmail.com</a></p>
                                         </div>
                                     </div>
                                     <div class="dbox w-100 d-flex align-items-center">
@@ -101,7 +101,7 @@
                                             <span class="fa fa-linkedin-square"></span>
                                         </div>
                                         <div class="text pl-3">
-                                            <p><span>LinkedIn: </span> <a href="https://www.linkedin.com/in/paramveer-singh-2a2694220/">Visit my Profile</a></p>
+                                            <p><span>LinkedIn: </span> <a target="_blank" href="https://www.linkedin.com/in/paramveer-singh-2a2694220/">Visit my Profile</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -112,6 +112,17 @@
             </div>
         </div>
     </section>
+
+    <script>
+        {{!-- Form clearing --}}
+        sendMsgBtn.onclick = (e) => {
+                document.getElementById('name').value = ""
+                document.getElementById('email').value = ""
+                document.getElementById('subject').value = ""
+                document.getElementById('message').value = ""
+                e.preventDefault();
+            }
+    </script>
 
     <script defer src="js/jquery.min.js"></script>
     <script defer src="js/popper.js"></script>
