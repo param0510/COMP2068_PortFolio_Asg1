@@ -17,4 +17,5 @@ router.get('/projects', (req, res, next) => {
 router.get('/contact', (req, res, next) => {
   res.render('./index/contact', {title: 'Contact Me'})
 })
+
 module.exports = router;
